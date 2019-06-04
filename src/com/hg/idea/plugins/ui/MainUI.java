@@ -86,10 +86,10 @@ public class MainUI extends JFrame {
         Box box1 = createChooseBox();
         box1.add(createTitle("model src"));
         textFieldWithBrowseButton1 = createSrcChoose();
-        if (formatSetting.getModelPkg().equals("")){
+        if (formatSetting.getModelSrc().equals("")){
             textFieldWithBrowseButton1.setText(config.getProjectSrc().getPath() + "/src");
         }else {
-            textFieldWithBrowseButton1.setText(config.getProjectSrc().getPath()+ "/"+formatSetting.getModelPkg().replace(".","/"));
+            textFieldWithBrowseButton1.setText(formatSetting.getModelSrc());
         }
         box1.add(textFieldWithBrowseButton1);
 
@@ -128,10 +128,10 @@ public class MainUI extends JFrame {
         Box box3 = createChooseBox();
         box3.add(createTitle("mapper src"));
         textFieldWithBrowseButton3 = createSrcChoose();
-        if (formatSetting.getMapperPkg().equals("")){
+        if (formatSetting.getMapperSrc().equals("")){
             textFieldWithBrowseButton3.setText(config.getProjectSrc().getPath() + "/src");
         }else {
-            textFieldWithBrowseButton3.setText(config.getProjectSrc().getPath()+ "/"+formatSetting.getMapperPkg().replace(".","/"));
+            textFieldWithBrowseButton3.setText(formatSetting.getMapperSrc());
         }
         box3.add(textFieldWithBrowseButton3);
 
