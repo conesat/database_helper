@@ -1,0 +1,42 @@
+<idea-plugin>
+    <id>com.hg.idea.plugins.databse_helper</id>
+    <name>DataBase Helper</name>
+    <version>1.0</version>
+    <vendor email="1092501244@qq.com" url="http://www.chinahg.top">HG</vendor>
+
+    <description><![CDATA[
+      Enter short description for your plugin here.<br>
+      <em>most HTML tags may be used</em>
+    ]]></description>
+
+    <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+    </change-notes>
+
+    <depends>com.intellij.modules.ultimate</depends>
+    <depends>com.intellij.database</depends>
+
+    <idea-version since-build="173.0"/>
+
+    <application-components>
+
+          
+    </application-components>
+
+
+    <extensions defaultExtensionNs="com.intellij">
+        <projectService serviceInterface="com.hg.idea.plugins.util.FormatSetting" serviceImplementation="com.hg.idea.plugins.util.FormatSetting"/>
+    </extensions>
+
+    <actions>
+        <action id="DatabaseActionGenerate"
+                class="com.hg.idea.plugins.action.DatabaseAction"
+                text="Generate Class">
+            <add-to-group group-id="DatabaseViewPopupMenu" anchor="first"
+                          relative-to-action="DatabaseView.Restore.Native"/>
+        </action>
+    </actions>
+
+</idea-plugin>
